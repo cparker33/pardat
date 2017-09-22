@@ -30,7 +30,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 const progressBar = new ProgressBarPlugin({
-  format: chalk.green.bold('[:current] ' + ' | :msg'),
+  format: chalk.green.bold('[:current] ' + ' | :msg | '),
   clear: false,
   width: 25,
   complete: chalk.green.bold('Ø'),
@@ -39,7 +39,7 @@ const progressBar = new ProgressBarPlugin({
 })
 
 const runShell =  new WebpackShellPlugin({
-  onBuildStart: ['echo \x1B[01;93m  ParDat v2.0.1 \x1B[0m'],
+  onBuildStart: ['echo \x1B[01;93m  ParDat v2.1.0 \x1B[0m'],
   onBuildEnd: ['npm run lint']
 })
 
