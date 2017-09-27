@@ -9,8 +9,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
+var StatsPlugin = require('stats-webpack-plugin')
+
 const dev_stats = require('./dev_stats')
 
+const statsplug = new StatsPlugin('stats.json', {
+      chunkModules: true,
+      exclude: [/node_modules[\\/]react/]
+    })
 
 const extractSass = new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
@@ -18,6 +24,8 @@ const extractSass = new ExtractTextPlugin({
 })
 
 const webpackUgly = new webpack.optimize.UglifyJsPlugin()
+
+
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './app/index.html',
@@ -30,7 +38,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 const progressBar = new ProgressBarPlugin({
-  format: chalk.green.bold('[:current] ' + ' | :msg | '),
+  format: chalk.green.bold('[:current] ' + ' [:msg] '),
   clear: false,
   width: 25,
   complete: chalk.green.bold('Ø'),
@@ -48,11 +56,6 @@ const cleanWebPack = new CleanWebpackPlugin(['dist'])
 const scopeHoist = new webpack.optimize.ModuleConcatenationPlugin()
 
 // const openBrowser = new WebpackBrowserPlugin()
-
-
-
-
-
 
 
 // ###### CONFIG ######
@@ -73,7 +76,6 @@ const config = {
   // cheap-module-eval-source-map
   devtool: 'cheap-module-eval-source-map',
   
-
   node: {
     fs: 'empty'
   },
@@ -101,6 +103,7 @@ const config = {
     HtmlWebpackPluginConfig,
     extractSass,
     progressBar,
+    statsplug,
     cleanWebPack, 
     runShell
   ],

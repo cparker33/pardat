@@ -20,8 +20,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack -p",
+    "dev": "webpack-dev-server --profile",
+    "build": "webpack -p --profile",
     "test": "mocha",
     "lint": "esw webpack.config.* src tools --color --watch & esw app/src --color --watch",
     "server": "json-server --watch --port 3301 app/src/json/api.json"
@@ -46,7 +46,9 @@
     "mocha": "^3.5.3",
     "node-sass": "^4.5.3",
     "progress-bar-webpack-plugin": "^1.10.0",
+    "react-dev-utils": "^4.0.1",
     "sass-loader": "^6.0.6",
+    "stats-webpack-plugin": "^0.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
     "webpack-browser-plugin": "^1.0.20",

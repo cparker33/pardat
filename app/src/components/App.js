@@ -3,6 +3,18 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
+// DEV
+const log = console.log // eslint-disable-line no-unused-vars
+
+// API
+import {callApiFunction} from '../api/app'
+
+// COMPONENTS
+// import AppBody from './body/AppBody'
+
+// IMG
+// import logo from './../assets/img/tn-logo.png'
+
 
 class App extends Component {
   
