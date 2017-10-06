@@ -19,6 +19,9 @@ import {callApiFunction} from '../api/app'
 class App extends Component {
   
   render() {
+
+    const sys_state = this.props.sys_state
+
     return (
       
       <div className='app-cont'>

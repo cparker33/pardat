@@ -9,6 +9,3 @@
 * SCSS
 * Normalize
 * Font-Awesome
-
-todo:
-Temp file
