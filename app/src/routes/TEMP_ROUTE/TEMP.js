@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const log = console.log // eslint-disable-line no-unused-vars
 
 
-class COMP extends Component {
+class TEMP extends Component {
   
   render() {
     return (
@@ -23,8 +23,8 @@ const mapStateToProps = state => ({
     sys_state: state
 })
 
-COMP.propTypes = {
+TEMP.propTypes = {
   sys_state: PropTypes.object
 }
 
-export default connect(mapStateToProps)(COMP)
+export default connect(mapStateToProps)(TEMP)

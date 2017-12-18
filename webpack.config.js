@@ -2,12 +2,10 @@
     ./webpack.config.js
 */
 const path = require('path')
-const chalk = require('chalk')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
 var StatsPlugin = require('stats-webpack-plugin')
 
@@ -25,8 +23,6 @@ const extractSass = new ExtractTextPlugin({
 
 const webpackUgly = new webpack.optimize.UglifyJsPlugin()
 
-
-
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './app/index.html',
   title: 'ParDat',
@@ -35,16 +31,6 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-
-
-const progressBar = new ProgressBarPlugin({
-  format: chalk.green.bold('[:current] ' + ' [:msg] '),
-  clear: false,
-  width: 25,
-  complete: chalk.green.bold('Ø'),
-  incomplete: chalk.gray.bold('Ø')
-
-})
 
 const runShell =  new WebpackShellPlugin({
   onBuildStart: ['echo \x1B[01;93m  ParDat v2.1.0 \x1B[0m'],
@@ -102,7 +88,6 @@ const config = {
     //  openBrowser,
     HtmlWebpackPluginConfig,
     extractSass,
-    progressBar,
     statsplug,
     cleanWebPack, 
     runShell

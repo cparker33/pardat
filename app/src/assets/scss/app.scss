@@ -1,6 +1,8 @@
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome.scss';
 
+@import './components.scss';
+
 html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
@@ -9,7 +11,6 @@ body {
   background-color: #EEE;
 }
 
-.app-cont {
+.app-component-wrapper {
   width: 100%;
-  
 }
