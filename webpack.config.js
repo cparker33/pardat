@@ -33,7 +33,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 const runShell =  new WebpackShellPlugin({
-  onBuildStart: ['echo \x1B[01;93m  ParDat v2.1.0 \x1B[0m'],
+  onBuildStart: ['echo \x1B[01;93m  ParDat v3.0.0 \x1B[0m'],
   onBuildEnd: ['npm run lint']
 })
 

@@ -26,11 +26,11 @@ class HomePage extends Component {
   render() {
     return (
       <div className='app-component-wrapper'>
-          <p style={{textAlign: 'center', width: '90%', paddingTop: '50px'}} > 
+          <p style={{textAlign: 'center', width: '95%', paddingTop: '150px'}} > 
            <i style={{fontSize: '40px'}} className="fa fa-star" />
          </p>
 
-         <p style={{textAlign: 'center', width: '100%', paddingTop: '50px'}} > 
+         <p style={{textAlign: 'center', width: '100%', paddingTop: '20px'}} > 
            <i style={{fontSize: '60px'}} className="fa fa-cube" />
          </p>
       </div>
