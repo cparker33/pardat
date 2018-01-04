@@ -33,7 +33,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 const runShell =  new WebpackShellPlugin({
-  onBuildStart: ['echo \x1B[01;93m  ParDat v3.0.0 \x1B[0m'],
+  onBuildStart: ['echo \x1B[01;93m  ParDat v3.0.1 \x1B[0m'],
   onBuildEnd: ['npm run lint']
 })
 
@@ -70,7 +70,8 @@ const config = {
     rules: [
       { test: /\.jsx?$/, loader: 'babel-loader', query: {presets:[ 'es2015', 'react', 'stage-2' ]}, exclude: /node_modules/ },
       { test: /\.css$/, loader: 'style-loader!css-loader'},
-      { test: /\.scss$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader', options: {includePaths: ['/app/src/assets/scss', 'absolute/path/b']}}]},
+      { test: /\.scss$/, use: [{loader: 'style-loader'}, 
+      {loader: 'css-loader'}, {loader: 'sass-loader', options: {includePaths: ['/app/src/assets/scss', 'absolute/path/b']}}]},
       { test: /\.(png|jpg|gif)$/, use: [{loader: 'file-loader', options: {}}]},
       { test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         use: [{loader: 'file-loader',
