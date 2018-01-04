@@ -8,12 +8,14 @@ const log = console.log // eslint-disable-line no-unused-vars
 
 // COMPONENTS
 
+
+
 class HomePage extends Component {
   
   constructor(props) {
     super(props)
     this.state = {
-      cpar_is_awesome: true
+      cal: 'par'
     }
   }
 

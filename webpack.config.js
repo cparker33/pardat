@@ -7,21 +7,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const WebpackShellPlugin = require('webpack-shell-plugin')
-var StatsPlugin = require('stats-webpack-plugin')
-
 const dev_stats = require('./dev_stats')
-
-const statsplug = new StatsPlugin('stats.json', {
-      chunkModules: true,
-      exclude: [/node_modules[\\/]react/]
-    })
+const cleanWebPack = new CleanWebpackPlugin(['dist'])
+const scopeHoist = new webpack.optimize.ModuleConcatenationPlugin()
+const webpackUgly = new webpack.optimize.UglifyJsPlugin()
 
 const extractSass = new ExtractTextPlugin({
     filename: '[name].[contenthash].css',
     disable: process.env.NODE_ENV === 'development'
 })
-
-const webpackUgly = new webpack.optimize.UglifyJsPlugin()
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './app/index.html',
@@ -31,21 +25,14 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
-
 const runShell =  new WebpackShellPlugin({
   onBuildStart: ['echo \x1B[01;93m  ParDat v3.0.1 \x1B[0m'],
   onBuildEnd: ['npm run lint']
 })
 
-const cleanWebPack = new CleanWebpackPlugin(['dist'])
-
-const scopeHoist = new webpack.optimize.ModuleConcatenationPlugin()
-
-// const openBrowser = new WebpackBrowserPlugin()
-
-
+// ####################
 // ###### CONFIG ######
- 
+// ####################
 
 const config = {
 
@@ -77,8 +64,8 @@ const config = {
         use: [{loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/',    // where the fonts will go
-            publicPath: '../'       // override the default path
+            outputPath: 'fonts/',
+            publicPath: '../'
           }
         }]
       }
@@ -89,7 +76,7 @@ const config = {
     //  openBrowser,
     HtmlWebpackPluginConfig,
     extractSass,
-    statsplug,
+    // statsplug,
     cleanWebPack, 
     runShell
   ],
