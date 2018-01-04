@@ -48,7 +48,6 @@
     "progress-bar-webpack-plugin": "^1.10.0",
     "react-dev-utils": "^4.0.1",
     "sass-loader": "^6.0.6",
-    "stats-webpack-plugin": "^0.6.1",
     "style-loader": "^0.18.2",
     "webpack-browser-plugin": "^1.0.20",
     "webpack-shell-plugin": "^0.5.0",
