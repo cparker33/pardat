@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import { BrowserRouter as Router} from 'react-router-dom'
 
-require('create-react-class')
-require('babel-polyfill')
+
+// require('create-react-class')
+// require('babel-polyfill')
 
 // ASSETS
 import 'normalize.css'

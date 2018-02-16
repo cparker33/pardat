@@ -1,4 +1,4 @@
-## Scaffolded on _ParDat v3.0.0_
+## Scaffolded on _ParDat_
 
 * Webpack
 * Lint
