@@ -1,3 +1,7 @@
+// IMPORT GLOBAL VARIABLES
+@import "utilities/variables";
+@import "utilities/mixins";
+
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome.scss';
 

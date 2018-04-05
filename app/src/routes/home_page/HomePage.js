@@ -1,15 +1,30 @@
-// DEPENDENCIES
+/*********************************
+  DEPENDENCIES
+*********************************/
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-// DEV
+/*********************************
+  DEV
+*********************************/
 const log = console.log // eslint-disable-line no-unused-vars
 
-// COMPONENTS
+/*********************************
+  LOCAL API
+*********************************/
 
+/*********************************
+  COMPONENTS
+*********************************/
 
+/*********************************
+  LOCAL STYLE
+ ********************************/
 
+/*********************************
+  HOMEPAGE
+*********************************/
 class HomePage extends Component {
   
   constructor(props) {
@@ -23,25 +38,22 @@ class HomePage extends Component {
     window.scrollTo(0, 0)
   }
 
-
-
   render() {
     return (
       <div className='app-component-wrapper'>
           <p style={{textAlign: 'center', width: '95%', paddingTop: '150px'}} > 
-           <i style={{fontSize: '40px'}} className="fa fa-star" />
-         </p>
-
-         <p style={{textAlign: 'center', width: '100%', paddingTop: '20px'}} > 
-           <i style={{fontSize: '60px'}} className="fa fa-cube" />
-         </p>
+            <i className="fa fa-star" style={{fontSize: '40px'}} />
+          </p>
+          <p style={{textAlign: 'center', width: '100%', paddingTop: '20px'}} > 
+            <i className="fa fa-cube" style={{fontSize: '60px'}} />
+          </p>
       </div>
     )
   }
 }
 
 const mapStateToProps = state => ({
-    sys_state: state
+  sys_state: state
 })
 
 HomePage.propTypes = {

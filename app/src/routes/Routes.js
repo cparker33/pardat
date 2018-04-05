@@ -7,7 +7,7 @@ import HomePage from './home_page/HomePage'
 
 const Routes = () => (
   <div>
-    <Route path='/' exact={true} component={HomePage} />
+    <Route component={HomePage} exact path='/' />
   </div>
 )
 

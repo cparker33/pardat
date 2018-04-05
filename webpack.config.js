@@ -38,7 +38,7 @@ const config = {
 
   entry: {
     // index: './app/index.js'
-    entry: ["babel-polyfill", "./app/index.js"]
+    entry: ['babel-polyfill', './app/index.js']
   },
   
   devServer: {
