@@ -23,9 +23,9 @@ const log = console.log // eslint-disable-line no-unused-vars
  ********************************/
 
 /*********************************
-  HOMEPAGE
+  Main - CLASS
 *********************************/
-class HomePage extends Component {
+class Main extends Component {
   
   constructor(props) {
     super(props)
@@ -56,8 +56,8 @@ const mapStateToProps = state => ({
   sys_state: state
 })
 
-HomePage.propTypes = {
+Main.propTypes = {
   sys_state: PropTypes.object
 }
 
-export default connect(mapStateToProps)(HomePage)
+export default connect(mapStateToProps)(Main)

@@ -1,11 +1,18 @@
+/*********************************
+  REDUCER - STATE
+*********************************/
 const init_state = {
   name: 'cpardat' 
 }
 
-// DEV
+/*********************************
+  DEV
+*********************************/
 const log = console.log // eslint-disable-line no-unused-vars
 
-
+/*********************************
+  APP REDUCER
+*********************************/
 export function app_reducer(state = init_state, action) {
   
   switch (action.type) {

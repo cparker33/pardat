@@ -1,13 +1,20 @@
-// DEPENDENCIES
+/*********************************
+  DEPENDENCIES
+*********************************/
 import React from 'react'
 import { Route } from 'react-router-dom' 
 
-// COMPONENTS
-import HomePage from './home_page/HomePage'
+/*********************************
+  ROUTE COMPONENTS
+*********************************/
+import Main from './main/Main'
 
+/*********************************
+  ROUTES
+*********************************/
 const Routes = () => (
   <div>
-    <Route component={HomePage} exact path='/' />
+    <Route component={Main} exact path='/' />
   </div>
 )
 

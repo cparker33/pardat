@@ -1,13 +1,12 @@
 {
-  "name": "pardat",
-  "version": "3.0.1",
-  "author": "Caleb Parker",
-  "repository": "https://github.com/cparker33/pardat",
+  "name": "chrome-ext-client",
+  "version": "1.0.0",
+  "author": "",
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "dev": "webpack-dev-server --profile",
-    "build": "webpack -p --profile",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "mocha",
     "lint": "esw webpack.config.* src tools --color --watch & esw app/src --color --watch",
     "start": "json-server --watch --port 3301 app/src/json/api.json"
@@ -36,8 +35,10 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "chai": "^4.1.2",
     "chalk": "^2.1.0",
     "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.5",
     "eslint": "^4.6.1",
     "eslint-plugin-react": "^7.3.0",
@@ -51,14 +52,17 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack-browser-plugin": "^1.0.20",
-    "webpack-shell-plugin": "^0.5.0",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.2",
+    "webpack-shell-plugin": "^0.5.0"
   },
   "boilerplate": {
     "name": "pardat",
-    "version": "3.0.2",
+    "version": "3.0.1",
+    "description": "parker-foundation",
+    "repository": "https://github.com/cparker33/pardat",
     "author": "Caleb Parker",
-    "license": "MIT"
+    "license": "ISC"
   },
-  "description": "parker-foundation"
+  "description": ""
 }

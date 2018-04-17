@@ -1,19 +1,28 @@
-// DEPENDENCIES
+/*********************************
+  DEPENDENCIES
+*********************************/
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 
-// LOCAL - API
-import { callApiFunction } from './src/components/api/app'
+/*********************************
+  LOCAL - API
+*********************************/
+import { callApiFunction } from './src/api/app'
 
-// COMPONENTS
-
-// ROUTES
+/*********************************
+  ROUTES
+*********************************/
 import Routes from './src/routes/Routes'
 
-// DEV
+/*********************************
+  DEV
+*********************************/
 const log = console.log // eslint-disable-line no-unused-vars
 
+/*********************************
+  APP - CLASS
+*********************************/
 class App extends Component {
   render() {
     const sys_state = this.props.sys_state

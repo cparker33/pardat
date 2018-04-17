@@ -23,7 +23,7 @@ const log = console.log // eslint-disable-line no-unused-vars
  ********************************/
 
 /*********************************
-  TEMP
+  TEMP - CLASS
 *********************************/
 class TEMP extends Component {
   
